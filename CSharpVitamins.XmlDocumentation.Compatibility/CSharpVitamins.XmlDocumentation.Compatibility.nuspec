@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>CSharpVitamins.XmlDocumentation.Compatibility</id>
+		<version>$version$</version>
+		<authors>Dave Transom</authors>
+		<projectUrl>https://github.com/csharpvitamins/xmldoc-markdown-compat/</projectUrl>
+		<licenseUrl>https://raw.github.com/csharpvitamins/xmldoc-markdown-compat/master/LICENSE.md</licenseUrl>
+		<!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Normalizes leading whitespace found in Xml Documentation produced by Visual Studio to play nicer with plain text formats (like Markdown)</description>
+		<releaseNotes></releaseNotes>
+		<copyright>Copyright 2015</copyright>
+		<tags>markdown xml build tool utility whitespace</tags>
+	</metadata>
+	<files>
+		<file src="" exclude="bin\Release\*.exe" target="lib" />
+		<file src="bin\Release\xmldoc-markdown-compat.exe" target="tools" />
+	</files>
+</package>
