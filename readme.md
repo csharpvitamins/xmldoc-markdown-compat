@@ -2,7 +2,7 @@
 
 A small executable that **removes the leading white space** from Visual Studios XML Documentation, to make the content compatible with white-space significant formats e.g. Markdown.
 
-This tool was built to solve issues when consuming Visual Studio produced comments as Markdown in tools like [Swagger](swaggerio) (via [Swashbuckle](swashbuckle)) and [ASP.NET Web Api Help Page](webapihelppage).
+This tool was built to solve issues when consuming Visual Studio produced comments as Markdown in tools like [Swagger](http://swagger.io/) (via [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle)) and [ASP.NET Web Api Help Page](https://www.nuget.org/packages/Microsoft.AspNet.WebApi.HelpPage).
 
 
 ## How it works
@@ -87,9 +87,3 @@ Add a `post-build.ps1` to your *project*
 		& $transform $file.FullName /replace
 	}
 
-
-
-
-[webapihelppage]: https://www.nuget.org/packages/Microsoft.AspNet.WebApi.HelpPage
-[swashbuckle]: https://github.com/domaindrivendev/Swashbuckle
-[swaggerio]: http://swagger.io/
