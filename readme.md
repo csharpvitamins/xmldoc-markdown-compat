@@ -39,6 +39,10 @@ Examples:
 
 The easiest approach, if you're using Visual Studio, is to set up a post-build event to enumerate the documentation files in your project, performing an in-place conversion on each file.
 
+Available on [NuGet](https://www.nuget.org/packages/CSharpVitamins.XmlDocumentation.Compatibility/). To install, run the following command in the Package Manager Console:
+
+	PM> Install-Package CSharpVitamins.XmlDocumentation.Compatibility -Pre
+
 
 ### A Batch Example
 
