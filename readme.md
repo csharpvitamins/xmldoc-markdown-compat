@@ -53,17 +53,20 @@ Post-build event command line:
 
 Add a `post-build.bat` to your *project*
 
-	echo off
-	
-	set SOLUTION_ROOT=%1
-	set TRANSFORM="%SOLUTION_ROOT%packages\CSharpVitamins.XmlDocumentation.Compatibility.1.0.0-alpha\tools\xmldoc-markdown-compat.exe"
-	set BIN=%2
-	
-	for /r "%BIN%" %f in (*.xml) do (
-		echo xmldoc-markdown-compat %%f
-		%TRANSFORM% %%f /replace
-	)
+``` batch
 
+echo off
+
+set SOLUTION_ROOT=%1
+set TRANSFORM="%SOLUTION_ROOT%packages\CSharpVitamins.XmlDocumentation.Compatibility.1.0.0-alpha\tools\xmldoc-markdown-compat.exe"
+set BIN=%2
+
+for /r "%BIN%" %f in (*.xml) do (
+	echo xmldoc-markdown-compat %%f
+	%TRANSFORM% %%f /replace
+)
+
+```
 
 ### A PowerShell example
 
@@ -74,16 +77,19 @@ Post-build event command line:
 
 Add a `post-build.ps1` to your *project*
 
-	Param (
-		[string]$solutionRoot,
-		[string]$bin
-	)
-	
-	$transform = Join-Path $solutionRoot 'packages\CSharpVitamins.XmlDocumentation.Compatibility.1.0.0-alpha\tools\xmldoc-markdown-compat.exe'
-	
-	$files = Get-ChildItem -path $bin -filter *.xml
-	foreach ($file in $files) {
-		Write-Host "xmldoc-markdown-compat $($file.Name)"
-		& $transform $file.FullName /replace
-	}
+``` powershell
 
+Param (
+	[string]$solutionRoot,
+	[string]$bin
+)
+
+$transform = Join-Path $solutionRoot 'packages\CSharpVitamins.XmlDocumentation.Compatibility.1.0.0-alpha\tools\xmldoc-markdown-compat.exe'
+
+$files = Get-ChildItem -path $bin -filter *.xml
+foreach ($file in $files) {
+	Write-Host "xmldoc-markdown-compat $($file.Name)"
+	& $transform $file.FullName /replace
+}
+
+```
